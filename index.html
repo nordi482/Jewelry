@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewerlry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/material-icons@1.13.8/iconfont/material-icons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fahkwang&family=Inter:wght@600&family=Jost:ital,wght@0,500;1,200&family=Merriweather&family=Nunito+Sans:opsz@6..12&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Sriracha&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<style>
+    /* first-nav styling */
+
+    .first-nav {
+        background-color: rgb(247, 247, 247);
+        color: rgb(79, 76, 87);
+        font-family: 'Merriweather', serif;
+        font-weight: lighter;
+        font-size: small;
+        padding: 0.1vh;
+        text-align: center;
+        top: 0%;
+        position: absolute;
+        width: 100%;
+    }
+
+    .navbar {
+        display: flex;
+        margin-top: 10vh;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .left-section {
+        margin-left: 2vw;
+    }
+
+    .search-icon {
+        margin-right: 2vw;
+        color: black;
+    }
+
+    .link {
+        color: #000;
+        margin-right: 2vw;
+    }
+
+    .logo-center {
+        margin-right: 1.5vw;
+    }
+
+
+    .right-section {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5vw;
+    }
+
+    .socials {
+        margin-right: 2vw;
+    }
+
+    .social {
+        margin-right: 1.5vw;
+        font-size: 1.2rem;
+    }
+
+    .cart {
+        margin-right: 2vw;
+    }
+
+    .shop {
+        position: relative;
+    }
+
+    .num {
+        border-radius: 100%;
+        background-color: #000;
+        color: white;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        font-size: 70%;
+        width: 2.5vh;
+        height: 2.5vh;
+        position: absolute;
+        line-height: 2.5vh;
+        text-align: center;
+        left: 96%;
+        bottom: 0;
+        top: 10%;
+    }
+
+    .numbers {
+        margin-right: 1vw;
+    }
+
+    .hero {
+        margin-top: 3vh;
+        background-color: rgb(221, 209, 193);
+        /* background-image: url(https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/fashion-designer-template-hero-img-bg.jpg); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        line-height: 4vh;
+        width: 95vw;
+        margin-left: 2.5vw;
+        display: flex;
+        border-radius: 0.5%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero-description {
+        font-size: 11rem;
+        margin-left: 8vw;
+        font-family: 'Fahkwang', sans-serif;
+        color: white;
+        margin-top: 8vh;
+        font-weight: 600%;
+    }
+
+    .hero-word {
+        margin-left: 8vw;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        color: white;
+        padding: 0%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        position: absolute;
+        top: 70%;
+    }
+
+
+    .hero-btn {
+        margin-left: 8vw;
+        padding: 1vw;
+        border: 1px solid transparent;
+        width: 16vw;
+        font-size: small;
+        font-weight: 600;
+        position: absolute;
+        top: 80%;
+    }
+
+    .rows {
+        padding: 8vw;
+        padding-top: 2%;
+    }
+
+    .shop-title {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15vh;
+    }
+
+    .shop-word {
+        margin-left: 8vw;
+        font-family: 'Fahkwang', sans-serif;
+    }
+
+    .btn-shop {
+        margin-right: 8vw;
+        padding: 1vw;
+        width: 10vw;
+        background-color: white;
+        border:1px solid #111111;
+        border-radius: 1%;
+    }
+
+    .testimonials {
+        display: flex;
+        margin-left: 8vw;
+        /* margin-top: 5vw; */
+        justify-content: space-between;
+        padding-top: 5%;
+        padding-right: 18%;
+        
+    }
+
+
+    .cust-headings {
+        margin-left: 8vw;
+        font-size: 7rem;
+        font-weight: bold;
+        font-family: 'Fahkwang', sans-serif;
+    }
+
+    .review-word {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 545;
+    }
+
+    .cust-name {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5%;
+        padding-right: 50%;
+        padding-bottom: 5%;
+    }
+
+    .person {
+        border-radius: 90%;
+        line-height: 2%;
+    }
+
+    .offer {
+        background-image: url(https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/fashion-designer-template-cta-bg-img.jpg);
+        padding: 8%;
+        margin-top: 5%;
+    }
+
+    .offer-title {
+        text-align: center;
+        color: white;
+        font-family: 'Fahkwang', sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        margin-top: 0%;
+    }
+
+    .offer-headings {
+        font-weight: 600;
+        font-size: 4rem;
+        text-align: center;
+        color: white;
+    }
+
+    .offer-btn {
+       padding: 1.2%;
+       width: 14vw;
+       border: 1px solid transparent;
+       font-size: small;
+       margin-left: 34vw;
+       margin-top: 4%;
+    }
+
+    .row-card {
+        padding: 8vw;
+        padding-top: 4%;
+    }
+
+    .cards {
+        width: 100%;
+    }
+
+    .blog-title {
+        font-family: 'Fahkwang', sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .blog-text {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+        margin-top: 8%;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(38,33,47);
+        color: white;
+    }
+
+    .logo {
+        margin-left: 8vw;
+        margin-bottom: 4vh;
+    }
+
+    .cont {
+        margin-right: 8vw;
+    }
+
+    .footer-logo {
+        margin-bottom: 4vh;
+        font-weight: 200;
+    }
+
+    .footer-socials {
+       font-size: 1.2rem;
+
+    }
+
+    .footer-link {
+        font-size: medium;
+    }
+
+    
+</style>
+
+<body>
+
+    <div class="first-nav">
+        <p class="nav-text">Summer Sale. up to 40% off.</p>
+    </div>
+
+    <div class="navbar">
+
+
+
+        <div class="left-section">
+            <a href="#"><i class="fa-solid fa-magnifying-glass search-icon"></i></a>
+            <a href="#" class="link">Home</a>
+            <a href="#" class="link">Shop</a>
+            <a href="#" class="link">Categories</a>
+        </div>
+
+
+        <div class="logo-center">
+            <img src="https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/site-logo.svg"
+                alt="img">
+        </div>
+
+
+        <div class="right-section">
+            <div class="socials">
+                <i class="fa-brands fa-instagram social"></i>
+                <i class="fa-brands fa-facebook social"></i>
+                <i class="fa-brands fa-twitter social"></i>
+                <i class="fa-brands fa-youtube social"></i>
+            </div>
+
+            <div class="cart">
+                <span class="numbers">$0.00</span>
+                <i class="fa-solid fa-cart-shopping shop"></i>
+                <span class="num">0</span>
+            </div>
+
+            <div class="user">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h6 class="hero-description">Party <br> Wears</h6>
+            <p class="hero-word">In congue venenatis bibendum viverra sit augue elit sed viverra fames blandit.</p>
+            <button class="hero-btn">SHOP THE COLLECTION</button>
+        </div>
+
+        <div class="img">
+            <img src="images/girl.png" alt="img">
+        </div>
+    </div>
+    </div>
+
+    <div class="shop">
+
+        <div class="shop-title">
+
+            <div class="shop-word">
+                LATEST COLLECTION
+            </div>
+
+            <div class="shop-btn">
+                <button class="btn-shop">VIEW ALL</button>
+            </div>
+
+        </div>
+
+        <div class="row rows">
+            <div class="col s3">
+                <div class="cards">
+                    <img class="responsive-img" src="https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/fashion-designer-template-product-img-9-600x800.jpg"
+                        alt="shop-img">
+                    <h6 class="fash-word">Eterna long dress black</h6>
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p class="shop-price">$149.50</p>
+                </div>
+            </div>
+
+            <div class="col s3">
+                <div class="cards">
+                    <img src="https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/fashion-designer-template-product-img-13-600x800.jpg"
+                        alt="shop-img" class="responsive-img">
+                    <h6 class="fash-word">Eterna long dress black</h6>
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p class="shop-price">$149.50</p>
+                </div>
+            </div>
+
+            <div class="col s3">
+                <div class="cards">
+                    <img class="responsive-img" src="https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/fashion-designer-template-product-img-8-600x800.jpg"
+                        alt="shop-img">
+                    <h6 class="fash-word">Eterna long dress black</h6>
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p class="shop-price">$149.50</p>
+                </div>
+            </div>
+
+            <div class="col s3">
+                <div class="cards">
+                    <img class="responsive-img" src="https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/fashion-designer-template-product-img-7-600x800.jpg"
+                        alt="shop-img">
+                    <h6 class="fash-word">Eterna long dress black</h6>
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <p class="shop-price">$149.50</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="customer-review">
+        <h6 class="cust-headings">
+            Testimonials
+        </h6>
+
+
+        <div class="testimonials">
+
+            <div class="customer-testimonial">
+
+                <div class="review">
+                    <div class="review-word">
+                        "Gravida lorem id vitae pulvinar praesent <br> aliquet pellentesque non quam viverra <br> cursus nulla mi consectetur tempor sed <br> lectus ultricies urna risus sit."
+                    </div>
+
+                    <div class="cust-name">
+                        <img src="https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/fashion-designer-reviewer-profile-img-4.jpg" alt="img" class="person">
+                        <p class="c-name">	
+                            PAULA ROBINSON</p>
+                    </div>
+                </div>
+
+
+                <div class="review">
+                    <div class="review-word">
+                        "Gravida lorem id vitae pulvinar praesent <br> aliquet pellentesque non quam viverra <br> cursus nulla mi consectetur tempor sed <br> lectus ultricies urna risus sit."
+                    </div>
+
+                    <div class="cust-name">
+                        <img src="https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/fashion-designer-reviewer-profile-img-3.jpg" alt="img" class="person">
+                        <p class="c-name">	
+                            LUIS CARLOS</p>
+                    </div>
+                </div>
+
+            </div>    
+
+
+            <div class="customer-testimonial">
+
+                <div class="review">
+                    <div class="review-word">
+                        "Gravida lorem id vitae pulvinar praesent <br> aliquet pellentesque non quam viverra <br> cursus nulla mi consectetur tempor sed <br> lectus ultricies urna risus sit."
+                    </div>
+
+                    <div class="cust-name">
+                        <img src="https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/fashion-designer-reviewer-profile-img-2.jpg" alt="img" class="person">
+                        <p class="c-name">	
+                            	ALICIA STONE</p>
+                    </div>
+                </div>
+
+
+                <div class="review">
+                    <div class="review-word">
+                        "Gravida lorem id vitae pulvinar praesent <br> aliquet pellentesque non quam viverra <br> cursus nulla mi consectetur tempor sed <br> lectus ultricies urna risus sit."
+                    </div>
+
+                    <div class="cust-name">
+                        <img src="https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/fashion-designer-reviewer-profile-img-1.jpg" alt="img" class="person">
+                        <p class="c-name">	
+                            	MATTHEW JOHNSON</p>
+                    </div>
+                </div>
+
+            </div>    
+        
+        </div>        
+    </div>
+
+
+    <div class="offer">
+        <h6 class="offer-title">SPECIAL OFFER</h6>
+        <h4 class="offer-headings">Up to 30% OFF</h4>
+        <button class="offer-btn">SHOP NOW</button>
+    </div>
+
+    <div class="blogs">
+        
+        
+        <div class="shop-title">
+
+            <div class="shop-word">
+                LATEST FROM THE BLOG
+            </div>
+
+            <div class="shop-btn">
+                <button class="btn-shop">VIEW ALL</button>
+            </div>
+
+        </div>
+
+
+
+        <div class="row row-card">
+            
+            <div class="col s4">
+                <div class="cards">
+                    <img class="responsive-img"  src="https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/fashion-designer-template-blog-featured-img-3.jpg" alt="img">
+                    <h5 class="blog-title">Ultrices scelerisque nibh in malesuada</h6>
+                    <h6 class="blog-text">Vel aenean id lacus, nec volutpat purus tempor lacus, egestas libero adipiscing venenatis cras egestas enim.</h6>
+                </div>
+            </div>
+
+
+            <div class="col s4">
+                <div class="cards">
+                    <img class="responsive-img"  src="https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/fashion-designer-template-blog-featured-img-2.jpg" alt="img">
+                    <h5 class="blog-title">Placerat mollis congue mauris pulvinar</h6>
+                    <h6 class="blog-text">Suscipit urna, leo aliquam pretium urna duis gravida proin tristique ullamcorper ornare ut mauris varius pellentesque.</h6>
+                </div>
+            </div>
+
+
+            <div class="col s4">
+                <div class="cards">
+                    <img class="responsive-img"  src="https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/fashion-designer-template-blog-featured-img-1.jpg" alt="img">
+                    <h5 class="blog-title">Gravida sed varius id</h6>
+                    <h6 class="blog-text">Vel ornare lobortis nunc, magna neque, sapien orci aliquam duis scelerisque ut lectus cursus elementum sed.</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="logo">
+            <img src="https://websitedemos.net/fashion-designer-boutique-02/wp-content/uploads/sites/917/2021/07/site-logo.svg" alt="img">
+            <h6 class="footer-logo">Pulvinar aenean dignissim porttitor sed <br> risus urna, pretium quis non id.</h6>
+                <div class="footer-socials">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+        </div>
+
+        <div class="categories">
+            <h4 class="footer-link">Categories</h4>
+
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Checkout</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">My account</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+        </div>
+
+        <div class="contact">
+            <h4 class="footer-link">Contact Us</h4>
+
+            <h6 class="cont">
+                123 Demo Blvd, Miami, FL 4567, United States <br>
+                +1 123-456-7890 <br>
+                mail@example.com
+            </h6>
+        </div>
+    </div>
+</body>
+
+</html>
